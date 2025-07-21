@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Um site de exemplo do modulo de CSS">
+    <meta name="Keywords" content="Agencia Digital, CSS, HTML">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/responsivo.css">
+    <title>Formulário de Contrato de Aulas de Surf</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 50px auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #00796b;
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            margin-top: 25px;
+            background-color: #00796b;
+            color: white;
+            padding: 15px 25px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #004d40;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 30px;
+            color: #00796b;
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Contrate Sua Aula de Surf</h1>
+        <form action="enviar_formulario.php" method="POST">
+            <label for="nome">Nome completo:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" required placeholder="(xx) xxxxx-xxxx">
+
+            <label for="tipo">Tipo de Aula:</label>
+            <select id="tipo" name="tipo" required>
+                <option value="">Selecione...</option>
+                <option value="particular">Aula Particular</option>
+                <option value="grupo">Aula em Grupo</option>
+                <option value="passeio">Passeio de Surf</option>
+                <option value="standup">Aula de Stand Up Paddle</option>
+                <option value="avancado">Treinamento Avançado</option>
+            </select>
+
+            <label for="data">Data desejada:</label>
+            <input type="date" id="data" name="data" required>
+
+            <label for="mensagem">Mensagem ou observações:</label>
+            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Fale um pouco sobre sua experiência ou expectativas..."></textarea>
+
+            <button type="submit">Enviar Solicitação</button>
+        </form>
+
+        <a href="contrate.html" class="back-link">← Voltar para a página de contratação</a>
+    </div>
+
+</body>
+</html>

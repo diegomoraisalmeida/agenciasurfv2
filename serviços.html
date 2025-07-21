@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Um site de exemplo do modulo de CSS">
+    <meta name="Keywords" content="Agencia Digital, CSS, HTML">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/responsivo.css">
+    <title>Serviços - Escola de Surf</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e0f7fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .conteudo {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #00796b;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            color: #004d40;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .servicos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .servico {
+            background-color: #ffffff;
+            width: 280px;
+            margin: 15px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .servico:hover {
+            transform: translateY(-10px);
+        }
+
+        .servico img {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 15px;
+        }
+
+        .servico h3 {
+            color: #00796b;
+            margin-bottom: 10px;
+        }
+
+        .servico p {
+            color: #333;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .servico a {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 16px;
+            background-color: #00796b;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .servico a:hover {
+            background-color: #004d40;
+        }
+    </style>
+</head>
+
+
+<body>
+    <video autoplay muted loop id="video-fundo">
+        <source src="video/surf.mp4" type="video/mp4">
+      </video>
+    
+    
+      <nav class="navbar">
+        <div class="logo">
+            <!--<h1>Agencia Surf</h1>-->
+        </div>
+        <div class="menu">
+            
+            <a href="home.html">Home</a>
+            <a href="sobre.html">Sobre o Surf</a>
+            <a href="serviços.html">Serviços</a>
+            <a href="local.html">Local</a>
+            <a href="video.html">Videos</a>
+            <a  id="botao" href="fale.html">Fale Conosco</a>
+        </div>
+    </nav>
+     
+    <br><br>
+
+    <div class="conteudo">
+        <h1>Serviços da Escola de Surf</h1>
+
+        <h2>Oferecemos uma variedade de serviços para todos os níveis de surfistas!</h2>
+
+        <div class="servicos">
+            <!-- Aula Particular -->
+            <div class="servico">
+                <img src="img/aulaparticular.jpg" alt="Aula Particular">
+                <h3>Aula Particular</h3>
+                <p>Para quem deseja aprender de forma rápida e personalizada, com acompanhamento de um instrutor experiente.</p>
+                <a href="aulaparticular.html">Saiba mais</a>
+            </div>
+
+            <!-- Aula em Grupo -->
+            <div class="servico">
+                <img src="img/aulaemgrupo.jpg" alt="Aula em Grupo">
+                <h3>Aula em Grupo</h3>
+                <p>Aprenda em grupo, compartilhando a experiência com outros alunos e criando uma atmosfera de aprendizado coletivo.</p>
+                <a href="aulaemgrupo.html">Saiba mais</a>
+            </div>
+
+            <!-- Aluguel de Pranchas -->
+            <div class="servico">
+                <img src="img/alugueldepranchas.png" alt="Aluguel de Pranchas">
+                <h3>Aluguel de Pranchas</h3>
+                <p>Oferecemos pranchas para todos os níveis. Ideal para quem ainda não tem seu próprio equipamento.</p>
+                <a href="aluguelpranchas.html">Saiba mais</a>
+            </div>
+
+            <!-- Passeio de Surf -->
+            <div class="servico">
+                <img src="img/passeiodesurf.webp" alt="Passeio de Surf">
+                <h3>Passeio de Surf</h3>
+                <p>Explore as melhores praias e ondas com um guia especializado que leva você para os melhores locais de surf.</p>
+                <a href="passeiodesurf.html">Saiba mais</a>
+            </div>
+
+            <!-- Aulas de Stand Up Paddle (SUP) -->
+            <div class="servico">
+                <img src="img/auladestandup.jpg" alt="Aulas de Stand Up Paddle">
+                <h3>Aulas de Stand Up Paddle</h3>
+                <p>Para quem gosta de um desafio mais calmo e ainda assim conectado com o mar, o SUP é uma ótima opção.</p>
+                <a href="aulasdestanduppaddle.html">Saiba mais</a>
+            </div>
+
+            <!-- Treinamento Avançado -->
+            <div class="servico">
+                <img src="img/trinamentodesurf.jpg" alt="Treinamento Avançado">
+                <h3>Treinamento Avançado</h3>
+                <p>Para surfistas que já têm experiência, oferecemos aulas focadas em manobras e performance de alto nível.</p>
+                <a href="treinamentoavancado.html">Saiba mais</a>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>

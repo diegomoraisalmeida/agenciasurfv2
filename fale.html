@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Um site de exemplo do modulo de CSS">
+    <meta name="Keywords" content="Agencia Digital, CSS, HTML">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/responsivo.css">
+    <title>Fale Conosco</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        form label {
+            display: block;
+            margin-top: 15px;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        form button {
+            margin-top: 20px;
+            padding: 12px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #0056b3;
+        }
+
+        .info-contato, .redes-sociais, .mapa {
+            margin-top: 40px;
+        }
+
+        .redes-sociais a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        footer {
+            background-color: #f1f1f1;
+            padding: 15px;
+            text-align: center;
+            color: #555;
+            margin-top: 50px;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <h1>Agencia Surf</h1>
+        </div>
+        <div class="menu">
+            
+
+            <a href="home.html">Home</a>
+            <a href="sobre.html">Sobre o Surf</a>
+            <a href="serviços.html">Serviços</a>
+            <a href="local.html">Local</a>
+            <a href="video.html">Videos</a>
+            <!--<a  id="botao" href="fale.html">Fale Conosco</a>-->
+        </div>
+    </nav>
+     <br>
+     <br>
+
+   <header>
+    <h1>Fale Conosco</h1>
+    <p>Estamos prontos para ouvir você!</p>
+   </header>
+
+<div class="container">
+    <h2>Envie sua mensagem</h2>
+    <form action="enviar.php" method="post">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <div class="info-contato">
+        <h2>Informações de Contato</h2>
+        <p><strong>Endereço:</strong> Rua Exemplo, 123 - Centro, Cidade/UF</p>
+        <p><strong>Telefone:</strong> (11) 99999-9999</p>
+        <p><strong>E-mail:</strong> contato@exemplo.com.br</p>
+        <p><strong>Horário de atendimento:</strong> Segunda a Sexta, das 9h às 18h</p>
+    </div>
+
+    <div class="redes-sociais">
+        <h2>Redes Sociais</h2>
+        <a href="https://facebook.com" target="_blank">Facebook</a>
+        <a href="https://instagram.com" target="_blank">Instagram</a>
+        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+    </div>
+
+    <div class="mapa">
+        <h2>Localização</h2>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.5058993441623!2d-46.6345126854933!3d-23.588015684668926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59b19d5f7d5b%3A0xd3f30282c0f9df6d!2sAv.%20Paulista%2C%201000!5e0!3m2!1spt-BR!2sbr!4v1626451000000!5m2!1spt-BR!2sbr" 
+            width="100%" 
+            height="300" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe>
+    </div>
+    <br>
+    <br>
+    <a href="index.html" class="voltar">← Voltar para o início</a>
+
+</div>
+<br>
+<br>
+
+
+
+<footer>
+    &copy; 2025 Sua Empresa. Todos os direitos reservados.
+</footer> 
+
+
+
+</body>
+</html>

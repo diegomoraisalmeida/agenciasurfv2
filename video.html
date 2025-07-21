@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Um site de exemplo do modulo de CSS">
+    <meta name="Keywords" content="Agencia Digital, CSS, HTML">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/responsivo.css">
+    <title>Vídeos - Agência Surf</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            color: #333;
+        }
+
+        #video-fundo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+            object-fit: cover;
+            filter: brightness(50%);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5%;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .navbar h1 {
+            color: white;
+        }
+
+        .menu a {
+            color: white;
+            margin: 0 5px;
+            text-decoration: none;
+        }
+
+        .menu a:hover {
+            text-decoration: underline;
+        }
+
+        .conteudo {
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+        }
+
+        .video-box {
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        video {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .voltar {
+            display: block;
+            margin: 40px auto 0;
+            width: fit-content;
+            padding: 10px 20px;
+            background-color: #00796b;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        .voltar:hover {
+            background-color: #004d40;
+        }
+    </style>
+</head>
+
+<!--aula 14 videos-->
+<body>
+    <!--video de fundo que reflete no codigo css na pagina 215-->
+    <!--<video autoplay muted loop id="video-fundo">
+        <source src="video/sol.mp4" type="video/mp4">
+      </video>-->
+    
+    <nav class="navbar">
+        <div class="logo">
+            <h1>Agencia Surf</h1>
+        </div>
+        <div class="menu">
+            
+            <a href="home.html">Home</a>
+            <a href="sobre.html">Sobre o Surf</a>
+            <a href="serviços.html">Serviços</a>
+            <a href="local.html">Local</a>
+            <!--<a href="video.html">Videos</a>-->
+            <!--<a  id="botao" href="fale.html">Fale Conosco</a>-->
+        </div>
+    </nav>
+    <br><br>
+    <br>
+    <div class="conteudo">
+        <h2 style="text-align: center;">Confira nossos vídeos de surf</h2>
+
+        <div class="video-box">
+            <video poster="img/tubo.jpg" controls controlsList="nodownload nofullscreen" disablepictureinpicture>
+                <source src="video/ondas.mp4" type="video/mp4" />
+                Seu navegador não suporta vídeos.
+            </video>
+        </div>
+
+        <div class="video-box">
+            <video poster="img/garotasol.jpg" controls controlsList="nodownload nofullscreen" disablepictureinpicture>
+                <source src="video/sol.mp4" type="video/mp4" />
+            </video>
+        </div>
+
+        <div class="video-box">
+            <video poster="img/surfmanha.jpg" controls controlsList="nodownload nofullscreen" disablepictureinpicture>
+                <source src="video/surf.mp4" type="video/mp4" />
+            </video>
+        </div>
+
+        <div class="video-box">
+            <video poster="img/garotaprancha.jpg" controls controlsList="nodownload nofullscreen" disablepictureinpicture>
+                <source src="video/surf.mp4" type="video/mp4" />
+            </video>
+        </div>
+
+        <!-- Exemplo de vídeo do YouTube -->
+        <!--
+        <div class="video-box">
+            <iframe width="800" height="450" src="https://www.youtube.com/embed/gJb62KUinLA" 
+            title="YouTube video player" frameborder="0" allowfullscreen 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+        </div>
+        -->
+
+        <a href="home.html" class="voltar">← Voltar para o início</a>
+    </div>
+   
+   
+   
+   
+   
+<!--vamos determinar a laugura do video usando a TAG width e tambe com a TAG controls para aparecer os controles para dar play e tambem podemos usar uma Tag poster para ficar no fundo da tela do video quando não estiver executando, e tambem podemos colocara uma TAG autoply para o video comecar assim que a pessoa entra no link, tambem podemos colocar a TAG controlsList="nodownload" para não fazer o download do videos, podemos colocar a TAG disablepictureinpicture para não aparecer a miniatura do video no canto abaixo, tambem podemos colocar a TAG nofullscreen para não almentar a tela do video , source é para OBS: SE FOR USAR VIDEOS DO YOTOBE AGENTE USA DA FORMA DE IFRAME VISTO NA AULA PASSADA-->
+   <!--<video poster="img/tubo.jpg" controls disablepictureinpicture controlsList="nodownload nofullscreen" width="800" height="450">
+    <source src="video/ondas.mp4" type="video/mp4">
+</video>
+
+<video poster="img/garotasol.jpg" controls disablepictureinpicture controlsList="nodownload nofullscreen" width="800" height="450">
+    <source src="video/sol.mp4" type="video/mp4">
+</video>
+
+<video poster="img/surfmanha.jpg" controls disablepictureinpicture controlsList="nodownload nofullscreen" width="800" height="450">
+    <source src="video/surf.mp4" type="video/mp4">
+</video>
+
+<video poster="img/surf.jpg" controls disablepictureinpicture controlsList="nodownload nofullscreen" width="800" height="450">
+    <source src="video/surf.mp4" type="video/mp4">
+</video>-->
+    
+
+
+<!--max-width: 100%: Garante que o vídeo nunca ultrapasse a largura do seu contêiner.
+max-height: 80vh: Limita a altura do vídeo a 80% da altura da tela (a altura da janela do navegador).
+width: auto; height: auto;: Isso mantém as proporções do vídeo intactas enquanto respeita os limites máximos definidos.-->
+   
+   
+   
+   <!--<video poster="img/surf.jpg" width="45%" height="60%" controls
+    disablepictureinpicture
+    controlsList="nodownload nofullscreen">
+        <source src="video/ondas.mp4"
+        type="video/mp4">
+    </video>-->
+
+
+    <!--roda uma pagina dentro de uma da web abaixo as tagd  com bordas de opções usei o margin-top para baixar o ifreme-->
+    <!--<iframe width="45%" height="400" src="https://www.youtube.com/embed/gJb62KUinLA?si=aGjamSoxkhkDOWqm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="margin-top:100px; margin-left: 80px; border: 4px solid rgb(209, 150, 236);"></iframe>-->
+    
+    <!--<iframe width="45%" height="400" src="https://www.youtube.com/embed/gJb62KUinLA?si=aGjamSoxkhkDOWqm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen 
+    style="margin-top:px; margin-left: 0px; border: 4px solid rgb(209, 150, 236);"></iframe> -->
+
+    <!--<iframe width="45%" height="400" src="https://www.youtube.com/embed/gJb62KUinLA?si=aGjamSoxkhkDOWqm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="margin-top:10px; margin-left: 80px;border: 4px solid rgb(209, 150, 236);"></iframe>-->
+
+    <!--/*<iframe width="45%" height="400" src="https://www.youtube.com/embed/gJb62KUinLA?si=aGjamSoxkhkDOWqm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="margin-top:10px; margin-left: 0px;border: 4px solid rgb(209, 150, 236);"></iframe>-->
+
+
+
+
+</body>
+</html>

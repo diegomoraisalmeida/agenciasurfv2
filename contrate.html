@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Um site de exemplo do modulo de CSS">
+    <meta name="Keywords" content="Agencia Digital, CSS, HTML">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/responsivo.css">
+    <title>Contrate Aulas de Surf | Escola de Surf</title>
+    <style>
+        /* Adicionando um fundo suave */
+        body {
+            background: #f0f0f0;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background: #00796b;
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 48px;
+            margin: 0;
+        }
+
+        .headline h2 {
+            font-size: 36px;
+            margin: 20px 0;
+        }
+
+        .headline p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .headline .contact-btn {
+            display: inline-block;
+            background-color: #004d40;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+
+        .headline .contact-btn:hover {
+            background-color: #00796b;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 50px 20px;
+        }
+
+        .service-box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .service-box h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .service-box p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .service-box a {
+            background-color: #00796b;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .service-box a:hover {
+            background-color: #004d40;
+        }
+
+        .contact-form {
+            background-color: #ffffff;
+            padding: 40px;
+            margin: 50px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form h2 {
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .contact-form button {
+            background-color: #00796b;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #004d40;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <!--<h1>Agencia Surf</h1>-->
+        </div>
+        <div class="menu">
+            
+
+            <!--<a href="home.html">Home</a>
+            <a href="sobre.html">Sobre o Surf</a>
+            <a href="serviços.html">Serviços</a>
+            <a  id="botao" href="fale.html">Fale Conosco</a>-->
+        </div>
+    </nav>
+
+    <div class="header">
+        <h1>Escola de Surf - Contrate Aulas</h1>
+        <p>Escolha o seu pacote de aulas de surf e comece sua jornada no oceano agora mesmo!</p>
+    </div>
+
+    <!-- Seção principal -->
+    <div class="headline">
+        <h2>Aulas Personalizadas para Todos os Níveis</h2>
+        <p><b>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi suscipit officiis voluptatum excepturi aut, dolor quos, asperiores nihil minima veniam.</b></p>
+        <a href="formulario.html" class="contact-btn">Contrate Agora</a>
+    </div>
+
+    <!-- Seção de serviços -->
+    <div class="services">
+        <div class="service-box">
+            <h3>Aulas Individuais</h3>
+            <p>Se você quer um aprendizado exclusivo e focado, nossas aulas particulares são ideais para você.</p>
+            <!--<a href="aulaparticular.html">Saiba Mais</a>-->
+        </div>
+
+        <div class="service-box">
+            <h3>Aulas em Grupo</h3>
+            <p>Aprenda com os outros e compartilhe a experiência nas nossas aulas em grupo.</p>
+            <!--<a href="aulaemgrupo.html">Saiba Mais</a>-->
+        </div>
+
+        <div class="service-box">
+            <h3>Aluguel de Pranchas</h3>
+            <p>Alugue uma prancha de alta qualidade para as suas aulas ou sessões de surf.</p>
+            <!--<a href="alugueldepranchas.html">Saiba Mais</a>-->
+        </div>
+
+        <div class="service-box">
+            <h3>Passeio de Surf</h3>
+            <p>Explore as melhores praias e ondas com nossos passeios guiados de surf.</p>
+            <!--<a href="passeiodesurf.html">Saiba Mais</a>-->
+        </div>
+    </div>
+
+    <!-- Formulário de contato -->
+    <div class="contact-form">
+        <h2>Entre em Contato</h2>
+        <form action="enviar_email.php" method="POST">
+            <input type="text" name="nome" placeholder="Seu nome" required>
+            <input type="email" name="email" placeholder="Seu e-mail" required>
+            <textarea name="mensagem" rows="5" placeholder="Deixe sua mensagem" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    <br>
+    <br>
+        <a href="index.html" class="back-link">← Voltar para a página principal</a>  
+    </div>
+
+
+
+
+    
+
+
+    
+</body>
+</html>
