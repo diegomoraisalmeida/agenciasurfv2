@@ -7,8 +7,8 @@
 
 body{
     margin:0;
-    font-family: "Shadows Into Light", cursive;
-    
+    /*font-family: "Shadows Into Light", cursive;*/
+    font-family: "Lobster", sans-serif;
     
     
 }
@@ -23,7 +23,7 @@ body{
     position: fixed;
     width: 100%;
     bottom: 91%;
-    top: 0;
+    
     
 }
 
