@@ -27,24 +27,32 @@
             object-fit: cover;
             filter: brightness(50%);
         }
-
+        
         .navbar {
-            display: flex;
+            /*display: flex;
             justify-content: space-between;
-            align-items: center;
-            padding: 5%;
+            align-items: center;*/
+            /*padding: 1%; deixa os menus muito abaixo*/
             background-color: rgba(0, 0, 0, 0.6);
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            height:115px;
+            width: 100%;
+           
         }
-
+      
         .navbar h1 {
             color: white;
         }
-
-        .menu a {
+        /*.menu a {
             color: white;
-            margin: 0 5px;
+            margin: 0px;
             text-decoration: none;
-        }
+        }*/
+
+
+     
 
         .menu a:hover {
             text-decoration: underline;
@@ -106,7 +114,7 @@
             <a href="sobre.html">Sobre o Surf</a>
             <a href="serviços.html">Serviços</a>
             <a href="local.html">Local</a>
-            <!--<a href="video.html">Videos</a>-->
+            <a href="video.html">Videos</a>
             <a  id="botao" href="fale.html">Fale Conosco</a>
         </div>
     </nav>
