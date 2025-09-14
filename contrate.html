@@ -11,72 +11,121 @@
     <title>Contrate Aulas de Surf | Escola de Surf</title>
     <style>
         /* Adicionando um fundo suave */
+        .navbar{
+            font-family: "Lobster", sans-serif;
+            display: flex;
+            flex-flow: row wrap;
+            height:100px;
+            background-color: rgba(0, 0, 0, 0.6);
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            bottom: 91%;
+    
+    
+    }
         body {
-            background: #f0f0f0;
-            font-family: Arial, sans-serif;
+            background-image: url('img/nascerdosol.jpg'); /* Caminho correto da imagem */
+            background-size: cover;                       /* A imagem ocupa toda a tela */
+            background-position: center;                  /* Centraliza a imagem */
+            background-attachment: fixed;                 /* A imagem não rola com a página */
             margin: 0;
             padding: 0;
+            height: 100vh;                                /* Garante que o fundo ocupe toda a altura da tela */
         }
-
+        
+        
         .header {
-            background: #00796b;
-            color: white;
-            padding: 50px 0;
+            /*background: #00796b;*/
+            color: rgb(47, 26, 143);
+            padding: 120px;
             text-align: center;
+          
+            
         }
 
         .header h1 {
             font-size: 48px;
             margin: 0;
+            
         }
 
         .headline h2 {
             font-size: 36px;
-            margin: 20px 0;
+            margin: 30px ;
         }
 
         .headline p {
             font-size: 18px;
             margin-bottom: 30px;
+            
         }
 
         .headline .contact-btn {
             display: inline-block;
-            background-color: #004d40;
+            background-color: #4b0574;
             color: white;
-            padding: 15px 30px;
+            padding: 10px 30px;
             text-decoration: none;
             font-size: 18px;
             border-radius: 5px;
+            font-family: Arial, sans-serif;
         }
 
         .headline .contact-btn:hover {
-            background-color: #00796b;
+            background-color: #f7b741;
         }
 
         .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            display: flex;
+            /*grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));*/
             gap: 30px;
-            margin: 50px 20px;
+            margin: 50px 30px;
         }
 
         .service-box {
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
+            background-image: url('img/nascerdosol.jpg');
+            background-size: cover;         /* Cobre todo o espaço do box */
+            background-position: center;    /* Centraliza a imagem */
+            background-repeat: no-repeat;
+            padding: 30px;
+            color: rgb(246, 247, 250);                   /* Garante que o texto seja visível sobre a imagem */
+            height: 290px;                  /* Ajuste o tamanho do boxconforme necessário */
+            width: 280px;                   /* Ajuste o tamanho do boxconforme necessário */   
+            display: flex;       
+            flex-direction: column;
+            justify-content: flex-end;     /* Posiciona o texto na parte inferior */
+            border-radius: 8px;            /* Opcional: cantos arredondados */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Sombra para melhor destaque */
+            box-sizing: border-box;     /* Garante que padding não aumente a largura */
+            font-family: Arial, sans-serif;
+            text-shadow: 2px 2px 4px rgba(15, 15, 15, 0.6);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            
         }
 
+        .service-box:hover {
+            transform: scale(1.25);                             /* Aumenta ligeiramente */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);        /* Aumenta a sombra */
+            cursor: pointer;                               /* Muda o cursor para indicar ação */
+        }
+        .services a {
+            text-decoration: none;
+            display: block;
+            color: inherit;
+}
+
+
         .service-box h3 {
-            font-size: 24px;
+            font-size: 22px;
             margin-bottom: 15px;
         }
 
         .service-box p {
-            font-size: 16px;
+            font-size: 19px;
             margin-bottom: 20px;
+            
         }
 
         .service-box a {
@@ -87,12 +136,10 @@
             border-radius: 5px;
         }
 
-        .service-box a:hover {
-            background-color: #004d40;
-        }
-
+        
+           /*entre em contato*/
         .contact-form {
-            background-color: #ffffff;
+            background-color: #e0dbdb;
             padding: 40px;
             margin: 50px 20px;
             border-radius: 10px;
@@ -127,6 +174,14 @@
         .contact-form button:hover {
             background-color: #004d40;
         }
+
+
+       
+
+
+
+
+
     </style>
 
 </head>
@@ -134,57 +189,104 @@
 
 <body>
     <nav class="navbar">
+
         <div class="logo">
-            <!--<h1>Agencia Surf</h1>-->
+          <h1>Agencia Surf</h1>
+        </div> 
+      <!-- Botão hamburguer para mobile -->
+        <div class="menu-toggle" id="menu-toggle">
+          ☰
         </div>
-        <div class="menu">
-            
 
-            <!--<a href="home.html">Home</a>
-            <a href="sobre.html">Sobre o Surf</a>
-            <a href="serviços.html">Serviços</a>
-            <a  id="botao" href="fale.html">Fale Conosco</a>-->
-        </div>
-    </nav>
+      <div class="menu"  id="menu">
+         
+          <a href="home.html">Home</a>
+          <a href="sobre.html">Sobre o Surf</a>
+          <a href="serviços.html">Serviços</a>
+          <a href="local.html">Local</a>
+          <a href="video.html">Videos</a>
+          <a  id="botao" href="fale.html">Fale Conosco</a>
+      </div>
+  </nav> 
 
-    <div class="header">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+
+    <!--<div class="header">
         <h1>Escola de Surf - Contrate Aulas</h1>
         <p>Escolha o seu pacote de aulas de surf e comece sua jornada no oceano agora mesmo!</p>
-    </div>
+    </div>-->
 
+    
+    
+    
     <!-- Seção principal -->
     <div class="headline">
-        <h2>Aulas Personalizadas para Todos os Níveis</h2>
-        <p><b>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi suscipit officiis voluptatum excepturi aut, dolor quos, asperiores nihil minima veniam.</b></p>
-        <a href="formulario.html" class="contact-btn">Contrate Agora</a>
+        <h2>Agende sua aula ou contrate nossos pacotes</h2>
+        <p><b>"Para iniciantes ou experientes, criamos um ambiente onde aprender é tão prazeroso quanto remar para o outside."</b></p>
+        
+        <a href="formulario.html" class="contact-btn">Agende sua Aula</a>
     </div>
 
-    <!-- Seção de serviços -->
+    <!-- Seção de serviços, ja foram feitos RESPONSIVOS DENTRO DE CADA ARQUIVO EX:experimental.html,individual.html,intensivo.html,familia.html,vip.html que são contratos de surf...JÁ O RESPONSIVO DO ARQUICO contrate.htm está no arquivo responsivo.html-->
     <div class="services">
-        <div class="service-box">
-            <h3>Aulas Individuais</h3>
-            <p>Se você quer um aprendizado exclusivo e focado, nossas aulas particulares são ideais para você.</p>
-            <!--<a href="aulaparticular.html">Saiba Mais</a>-->
-        </div>
+        <a href="experimental.html">
+            <div class="service-box">
+                <!--<a href="experimental.html"><img src="img/experimental.jpg" alt="Aulas Individuais" style="width: 50%; height:10;">-->
+                <h3>Pacote Experimental</h3>
+                <p>Perfeita para iniciantes que querem ter o primeiro contato com o surf, prancha e mar. Equipamentos inclusos e instrutor qualificado para te guiar nessa nova experiência.</p>
+            </div>
+        </a>
 
-        <div class="service-box">
-            <h3>Aulas em Grupo</h3>
-            <p>Aprenda com os outros e compartilhe a experiência nas nossas aulas em grupo.</p>
-            <!--<a href="aulaemgrupo.html">Saiba Mais</a>-->
-        </div>
+        <a href="individual.html">
+            <div class="service-box">
+                <!--<a href="experimental.html"><img src="img/experimental.jpg" alt="Aulas Individuais" style="width: 50%; height:10;">-->
+                    <h3>Pacote Individual</h3>
+                    <p>Acompanhamento exclusivo com extrutores para acelerar sua evolução no surf. Aula 100% personalizada com foco nas suas necessidades, nível e objetivos.</p>
 
-        <div class="service-box">
-            <h3>Aluguel de Pranchas</h3>
-            <p>Alugue uma prancha de alta qualidade para as suas aulas ou sessões de surf.</p>
-            <!--<a href="alugueldepranchas.html">Saiba Mais</a>-->
-        </div>
+            </div>
+        </a>
+        <a href="intensivo.html">
+            <div class="service-box">
+                <!--<a href="experimental.html"><img src="img/experimental.jpg" alt="Aulas Individuais" style="width: 50%; height:10;">-->
+                    <h3>Pacote Intensivo </h3>
+                    <p>Uma semana de imersão total no surf! Aulas diárias, dicas personalizadas e evolução garantida, perfeito para quem quer aprender rápido e com qualidade.</p>
 
-        <div class="service-box">
-            <h3>Passeio de Surf</h3>
-            <p>Explore as melhores praias e ondas com nossos passeios guiados de surf.</p>
-            <!--<a href="passeiodesurf.html">Saiba Mais</a>-->
-        </div>
+            </div>
+        </a>
+        <a href="familia.html">
+            <div class="service-box">
+                <!--<a href="experimental.html"><img src="img/experimental.jpg" alt="Aulas Individuais" style="width: 50%; height:10;">-->
+                    <h3>Pacote Família</h3>
+                    <p>Treinamento e diversão garantida para toda a família! Aulas leves e descontraídas para adultos e crianças, com foco na convivência, conhecimento e segurança no mar.</p>
+
+            </div>
+        </a>
+        <a href="vip.html">
+            <div class="service-box">
+                <!--<a href="experimental.html"><img src="img/experimental.jpg" alt="Aulas Individuais" style="width: 50%; height:10;">-->
+                    <h3>Pacote VIP</h3>
+                    <p>Aula particular com instrutor exclusivo, análise em vídeo, feedback técnico e treino personalizado. Para quem quer o melhor da experiência e evoluir no surf.</p>
+
+            </div>
+        </a>
+        
+    
+    
+    
     </div>
+    
+   
+
+
+        
+
+        
+    
 
     <!-- Formulário de contato -->
     <div class="contact-form">
@@ -200,10 +302,17 @@
         <a href="index.html" class="back-link">← Voltar para a página principal</a>  
     </div>
 
-
-
-
     
+    
+    
+    <script>
+        const toggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
+      
+        toggle.addEventListener('click', () => {
+          menu.classList.toggle('show');
+        });
+      </script>
 
 
     

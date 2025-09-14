@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Um site de exemplo do modulo de CSS">
+    <meta name="Keywords" content="Agencia Digital, CSS, HTML">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/responsivo.css">
+    <title>Contrato - Aula de Surf Experimental</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6f2f8;
+            margin: 0;
+            padding: 40px;
+        }
+        
+
+        
+      
+        
+        h1, h2 {
+            color: #0a4b75;
+        }
+        .contrato {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: auto;
+        }
+        input[type="text"], input[type="date"], input[type="time"] {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 15px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .assinaturas {
+            margin-top: 40px;
+        }
+        .linha {
+            border-bottom: 1px solid #000;
+            width: 300px;
+            margin-top: 40px;
+        }
+        button {
+            background-color: #0a4b75;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #083a5c;
+        }
+
+        .back-link {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #0a4b75;
+            color: rgb(19, 18, 18);
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            font-family: Arial, sans-serif;
+}
+
+        .back-link:hover {
+            background-color: #b8b526;
+}
+
+    
+
+        
+    </style>
+</head>
+
+<body>
+    
+    <!--/*<body style="background-image: url('img/garota.jpg'); background-size: cover; background-position: center;">-->
+
+    
+    
+    <!--<nav class="navbar">
+        <div class="logo">
+            <h1>Agencia Surf</h1>
+        </div>
+        <div class="menu">
+            
+
+            <a href="home.html">Home</a>
+            <a href="sobre.html">Sobre o Surf</a>
+            <a href="serviços.html">Serviços</a>
+            <a href="local.html">Local</a>
+            <a href="video.html">Videos</a>
+            <a  id="botao" href="fale.html">Fale Conosco</a>
+        </div>-->
+
+        
+    </nav>
+
+    <div class="contrato">
+        <h1>Contrato de Aula Experimental de Surf</h1>
+
+        <form id="contratoForm">
+            <label><strong>Nome do Aluno:</strong></label>
+            <input type="text" name="nome" required>
+
+            <label><strong>Data da Aula:</strong></label>
+            <input type="date" name="data" required>
+
+            <label><strong>Horário:</strong></label>
+            <input type="time" name="horario" required>
+
+            <label><strong>Local:</strong></label>
+            <input type="text" name="local" required>
+        </form>
+
+        <h2>Termos e Condições</h2>
+        <ul>
+            <li>A aula experimental tem duração aproximada de 1 (uma) hora.</li>
+            <li>É obrigatório o uso de equipamentos de segurança fornecidos pela escola.</li>
+            <li>O aluno declara estar em boas condições físicas e de saúde para a prática de surf.</li>
+            <li>A escola não se responsabiliza por objetos pessoais perdidos ou danificados.</li>
+            <li>O aluno deverá seguir todas as instruções do instrutor durante a aula.</li>
+        </ul>
+
+        <p>Ao assinar este contrato, o aluno (ou responsável) concorda com todos os termos acima e autoriza a participação na aula experimental de surf.</p>
+
+        <div class="assinaturas">
+            <div>
+                <p><strong>Assinatura do Aluno/Responsável:</strong></p>
+                <div class="linha"></div>
+            </div>
+            <div>
+                <p><strong>Assinatura da Escola de Surf:</strong></p>
+                <div class="linha"></div>
+            </div>
+        </div>
+
+        <p><em>Data: <span id="dataAtual"></span></em></p>
+
+        <br>
+        <button onclick="window.print()">Imprimir Contrato</button>
+
+    </div>
+
+    <a href="contrate.html" class="back-link">← Voltar para a página tipos de contratos</a>
+
+    <script>
+        // Exibe a data atual no rodapé do contrato
+        const hoje = new Date();
+        const dataFormatada = hoje.toLocaleDateString('pt-BR');
+        document.getElementById('dataAtual').textContent = dataFormatada;
+    </script>
+
+<br>
+<br>
+    
+</body>
+</html>

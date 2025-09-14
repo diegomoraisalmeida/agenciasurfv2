@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Um site de exemplo do modulo de CSS">
+    <meta name="Keywords" content="Agencia Digital, CSS, HTML">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/responsivo.css">
+    <title>Contrato - Aula de Surf VIP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6f2f8;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .contrato {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 800px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h1, h2 {
+            color: #0077b6;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+
+        input[type="text"], input[type="date"], input[type="time"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        ul {
+            margin-top: 20px;
+        }
+
+        .assinaturas {
+            margin-top: 40px;
+        }
+
+        .linha {
+            border-bottom: 1px solid #000;
+            width: 300px;
+            margin-top: 40px;
+        }
+
+        button {
+            margin-top: 30px;
+            padding: 12px 20px;
+            background-color: #0077b6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #005f8e;
+        }
+
+        .back-link {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            text-decoration: none;
+            background-color: #0077b6;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 14px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+
+        .back-link:hover {
+            background-color: #005f8e;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contrato">
+        <h1>Contrato de Aula de Surf VIP</h1>
+
+        <form id="contratoIndividualForm">
+            <label><strong>Nome do Aluno:</strong></label>
+            <input type="text" name="nome" required>
+
+            <label><strong>Data da Aula:</strong></label>
+            <input type="date" name="data" required>
+
+            <label><strong>Horário:</strong></label>
+            <input type="time" name="horario" required>
+
+            <label><strong>Local:</strong></label>
+            <input type="text" name="local" required>
+
+            <label><strong>Nome do Instrutor:</strong></label>
+            <input type="text" name="instrutor" required>
+        </form>
+
+        <h2>Termos e Condições</h2>
+        <ul>
+            <li>A aula vip tem duração aproximada de 3h30 com um unico itervalos de 20 minutos.</li>
+            <li>Equipamentos necessários (prancha e roupa de neoprene) serão fornecidos pela escola.</li>
+            <li>O aluno se compromete a seguir as instruções do instrutor durante toda a aula.</li>
+            <li>Em caso de condições climáticas desfavoráveis, a aula poderá ser remarcada.</li>
+            <li>A escola não se responsabiliza por acidentes causados por negligência do aluno.</li>
+        </ul>
+
+        <p>Ao assinar este contrato, o aluno ou responsável declara estar ciente dos termos e condições e apto para a prática do surf.</p>
+
+        <div class="assinaturas">
+            <div>
+                <p><strong>Assinatura do Aluno/Responsável:</strong></p>
+                <div class="linha"></div>
+            </div>
+            <div>
+                <p><strong>Assinatura do Instrutor:</strong></p>
+                <div class="linha"></div>
+            </div>
+        </div>
+
+        <p><em>Data: <span id="dataAtual"></span></em></p>
+
+        <button onclick="window.print()">Imprimir Contrato</button>
+    </div>
+
+    <a href="contrate.html" class="back-link">← Voltar para a página tipos de contratos</a>
+
+    <script>
+        // Inserir a data atual automaticamente
+        const hoje = new Date();
+        const dataFormatada = hoje.toLocaleDateString('pt-BR');
+        document.getElementById('dataAtual').textContent = dataFormatada;
+    </script>
+
+</body>
+</html>

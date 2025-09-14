@@ -27,13 +27,14 @@ body{
     
 }
 
+/* Agencia Surf*/
 .logo{
     flex:20%;
     margin-left:10% ;
     /* border: 1px solid red;   tinha uma borda para treinamento*/
     text-align: left;
 }
-
+    
 .logo h1{
     float: right;
     font-family: "Lobster", sans-serif;
@@ -42,6 +43,7 @@ body{
 }
      /*border: 1px solid red; tinha uma borda para treinamento*/
 
+/* Menus no canto superior direito*/
 .menu{
     flex:60%;
     text-align: right;
@@ -61,6 +63,7 @@ body{
 
 }
 
+/*botão superior direito*/
 #botao{
     background: rgb(131, 12, 228);
     padding: 5px 15px;
@@ -94,22 +97,27 @@ body{
 .headline h2{
     font-weight: 900;
     font-size: 20px;
-    color:#180f4a;
+    color:#180f4a;/* Este texto estará alinhado à esquerda A melhor escola de surf Escola de Surf...*/
     padding:0;
     margin: 0;
 }
 
 .headline p{
-     color:rgb(240, 236, 243) ;
-     text-align:left;
+    font-weight: 90;
+    font-size: 20px;
+     color:#180f4a ;
+     text-align:left;   /* Este texto estará alinhado à esquerda. "Na nossa escola de surf...*/
+     font-family: "Times New Roman", "Georgia", serif;
+
+
 }
 
 .contact-btn{
     display: inline-block;
     background: rgb(131, 12, 228);
-    padding: 20px;
+    padding: 15px;;
     color: white;
-    text-transform: none ;
+    text-transform: none ; /* Este é um texto com a transformação "none", então ele fica exatamente como foi digitado.*/
     border-radius: 4px;
     text-decoration: none;
 }
@@ -125,6 +133,7 @@ body{
     flex:40%;
     /*border:1px solid deeppink ;*/
     text-align: center;
+    
 }
 
 section{
@@ -147,21 +156,27 @@ section h2{
     font-weight: bold;
     color: rgb(45, 6, 85);
 }
-/*flex box, os card do plano, estrutores e professores*/
+/*flex box, os card do estrutura de aulas, estrutores e professores*/
 .servicos{
     display: inline-block;
-    margin-top: 5%;
+    margin-top: 2%;
 }
 
 .card{
+    background: #e0f3f2;
     display: inline-block;
     width: 30%;
     padding:20px;
     margin: 1%;
-    border: 2px solid #eacdf0;
-    border-radius: 10px;
+    border: 2px solid #d93cf8;
+    border-radius: 30px;
     cursor: pointer;
-    color: rgb(5, 5, 5);
+    color: #180f4a;
+    /*font-family: "Times New Roman", "Georgia", serif;*/
+    font-weight: 90;  /*tamnho da letra */
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    
     
 }
 
@@ -170,9 +185,9 @@ section h2{
 }
 /* ao passar o mouse */
 .card:hover{
-    /*background: #ff9029;*/
-    color: rgb(250, 246, 246);
-    padding: 20px;
+    background: #f38846;
+    color: #180f4a;
+    padding: 30px;
     width: 30%;
 }
 
@@ -188,6 +203,12 @@ section h2{
     display:block;
 }
 
+ 
+
+
+
+
+
 /* parte de baixo acabamento do site */
 footer{
     margin-top: 100px;
@@ -196,15 +217,22 @@ footer{
     /*background-image: linear-gradient(180deg, #180f4a,#090422,black);*/
     text-align: center;
     /*border-top: 5px solid #1b44fa;*/
+    font-family: "Times New Roman", "Georgia", serif;
+    
+    
 }
 
 .logo-rodape{
     padding: 100px;
+    
+
+    
 }
 
 .agencia{
-    font-family: "Lobster", sans-serif;
-    color:white;
+    /*font-family: "Times New Roman", "Georgia", serif;*/
+    /*font-family: "Lobster", sans-serif;*/
+    color:rgb(139, 14, 223);
     font-size: 34px;
 }
 
@@ -214,7 +242,10 @@ footer{
     right: 10px;
     
 }
-    /* Esse codigo de animação de fundo na pagina  reflete no arquivo pacotes.html local.html e index.hmtl*/
+   
+
+
+/* Esse codigo de animação de fundo na pagina  reflete no arquivo pacotes.html local.html e index.hmtl*/
 
     #video-fundo {
     position: fixed; /*Faz com que o vídeo fique fixo no fundo, mesmo ao rolar a página.*/
@@ -231,4 +262,112 @@ footer{
     position: relative;
     z-index: 0;
   }
+
+    
+  
+  
+  
+  
+  /*teste de estilo do novo sectio descubra mais experiencias*/
+
+  .surf-trip-bg {
+    padding: 100px 100px;
+    text-align: center;
+    white-space: nowrap; /* evita quebra de linha */
+    overflow-x: auto;    /* adiciona scroll horizontal */
+  }
+ 
+  
+  
+  .cards-bg-wrapper {
+    display: flex;
+    flex-wrap: wrap;          /* impede quebra de linha */
+    justify-content: flex-start; /* alinha os cards à esquerda */
+    gap: 10px;                  /* espaçamento entre os cards */
+    overflow-x: auto;           /* permite scroll horizontal */
+    padding-bottom: 10px;       /* opcional: dá espaço abaixo para scroll aparecer */
+  }
+  
+  
+  .card-bg-link {
+    text-decoration: none;
+    width: 290px;
+    height: 300px;
+  }
+  /*meus card on contem h2 P...*/
+  .card-bg {
+    
+    height: 300px;
+    
+    background-size: contain;
+    background-repeat:no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    font-family: "Times New Roman", "Georgia", serif;
+    
+    
+
+    
+  }
+
+ 
+  
+  .card-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  
+  .card-bg:hover {
+    transform: scale(1.05);
+  }
+  
+  .card-bg-text {
+    justify-content: center;
+    justify-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* pega toda a largura do card */
+    color: #fff;
+    z-index: 1;
+    text-align: center; /* agora funciona */
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  
+  .card-bg-text h3 {
+    
+    margin: 10px 0;
+    font-size: 1.9rem;
+    
+  }
+  
+ 
+
+  .card-bg-text p {
+    margin: 80px 0;
+    padding: 10px 1px;
+    font-size: 1.2rem;
+    width: 50%;            /* ocupa a largura do card */
+    max-width: 50%;        /* evita estouro */
+    box-sizing: border-box;
+    text-align: left;
+    word-wrap: break-word;
+  }
+  
+    
+  
+  
+  
+
+  
+  
+  
 

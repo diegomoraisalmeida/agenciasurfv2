@@ -1,15 +1,46 @@
+
+/*Primeira pagina do site index.html e home.html toda responsivo* botão amburgue e mais*/
+.menu-toggle {
+    display: none; /* padrão: escondido em telas grandes */
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    background-color: transparent;
+    padding: 10px;
+  }
+  
+  /* Quando a tela for menor que 1005px */
 @media screen and (max-width:1005px){
-    .navbar{
-        position: relative;
-       
-    }
-    .menu{
+    
+    .menu-toggle {
+        display: block;
+        
+      }
+    
+      .menu {
         display: none;
-    }
-    .logo{
-        margin: 0;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgb(102, 100, 100);
+      }
+    
+      .menu a {
+        padding: 10px;
+        border-top: 1px solid #555;
+      }
+    
+      .menu.show {
+        display: flex;
+      }
+    
+      .logo {
+        width: 100%;
         text-align: center;
-    }
+        margin-bottom: 10px;
+        transform: translateX(-40px); /* Move o conteúdo 20px para a esquerda */
+      }
+    
+   
     .header{
         padding-top: 50px;
     }
@@ -30,7 +61,191 @@
     .card{
         width: 100%;
     }
+
+    .texto-oculto{
+        width: 100%;
+    }
+
+    .card:hover{
+        width: 100%;
+    }
+
+    .card:hover img{
+        width: 100%;
+    }
+
+    .card:hover .card-text{
+        width: 100%;
+    }
+
+    .card:hover .texto-oculto{
+        width: 100%;
+    }
+    
     .whats{
-        display: none;
+        width: 100%;
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        
+    }
+
+    
+
+    /*esse responsivo é da pagina contrate.html o botão de contrate agora que fica na pagina inicial*/
+
+
+    /* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.headline {
+    font-family: Arial, sans-serif;
+}
+
+.headline h2 {
+    font-size: 36px;
+    margin: 30px ;
+}
+
+.headline p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    
+}
+
+.headline .contact-btn {
+    display: inline-block;
+    background-color: #4b0574;
+    color: white;
+    padding: 10px 30px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+}
+
+.headline .contact-btn:hover {
+    background-color: #f7b741;
+}
+
+/* Container de serviços */
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Cada box de serviço */
+.service-box {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Títulos */
+.service-box h3 {
+    font-size: 1.2rem;
+    color: #531c5a;
+    margin-bottom: 10px;
+    margin-top: 15px;      /* <--- Adiciona espaço antes do título */
+}
+
+/* Parágrafos */
+.service-box p {
+    color: rgb(253, 250, 250);
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin-top: 10px; /* <--- Adiciona espaço antes do parágrafo */
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Responsividade para tablets e celulares */
+
+@media (max-width: 768px) {
+    .service-box {
+        max-width: 90%;
     }
 }
+
+@media (max-width: 480px) {
+    .service-box {
+        max-width: 100%;
+    }
+
+    .service-box h3 {
+        font-size: 1.1rem;
+    }
+
+    .service-box p {
+        font-size: 0.9rem;
+    }
+}
+/*esse codigo responsivo é da calsse novo sction  descubra mais experiencias*/
+@media screen and (max-width:480px){
+
+    .surf-trip-bg {
+        width: 100%;
+      }
+     
+      
+      
+      .cards-bg-wrapper {
+        width: 100%;
+      }
+      
+      
+      .card-bg-link {
+        width: 100%;
+      }
+      
+      .card-bg {
+        width: 100%;
+      }
+      
+      .card-bg::before {
+        width: 100%;
+      }
+      
+      .card-bg:hover {
+        width: 100%;
+      }
+      
+      .card-bg-text {
+        width: 100%;
+      }
+      
+      .card-bg-text h3 {
+        width: 100%;
+      }
+      
+      .card-bg-text p {
+        width: 100%;
+      }
+}      
