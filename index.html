@@ -24,7 +24,7 @@
     <nav class="navbar">
 
           <div class="logo">
-            <h1>Agencia Surf V2</h1>
+            <h1>Agencia Surf</h1>
           </div> 
         <!-- Botão hamburguer para mobile -->
           <div class="menu-toggle" id="menu-toggle">
@@ -174,9 +174,69 @@
               </div>
             </div>
           </a>
+          
       
         </div>
       </section>
+
+
+
+      <section class="carrossel-surf">
+        <h2>Mundo do Surf</h2>
+        <div class="carrossel-container">
+            <button class="carrossel-btn left">&#10094;</button>
+            <div class="carrossel-wrapper">
+                <div class="carrossel-cards">
+                  
+                  <a href="wsl.html" class="card-link">
+                    <div class="carrossel-card">
+                        <img src="img/ambiente.jpeg" alt="Surfista 1">
+                        <h3>Manobras Incríveis</h3>
+                        <p>Aprenda as manobras mais radicais com nossos instrutores.</p>
+                    </div>
+                  </a>
+                
+                    <div class="carrossel-card">
+                        <img src="img/ambiente.jpeg" alt="Surfista 1">
+                        <h3>Manobras Incríveis</h3>
+                        <p>Aprenda as manobras mais radicais com nossos instrutores.</p>
+                    </div>
+                    <div class="carrossel-card">
+                        <img src="img/aulaemgrupo.jpg" alt="Surfista 2">
+                        <h3>Surf Feminino</h3>
+                        <p>Turmas exclusivas com foco no surf feminino e técnica.</p>
+                    </div>
+                    <div class="carrossel-card">
+                        <img src="img/aulateorica.jpeg" alt="Surfista 3">
+                        <h3>Surf Kids</h3>
+                        <p>Aulas seguras e divertidas para crianças iniciantes.</p>
+                    </div>
+                    <div class="carrossel-card">
+                        <img src="img/aulateorica.jpeg" alt="Surfista 3">
+                        <h3>Surf Kids</h3>
+                        <p>Aulas seguras e divertidas para crianças iniciantes.</p>
+                    </div>
+                    <div class="carrossel-card">
+                        <img src="img/aulateorica.jpeg" alt="Surfista 3">
+                        <h3>Surf Kids</h3>
+                        <p>Aulas seguras e divertidas para crianças iniciantes.</p>
+                    </div>
+                    <div class="carrossel-card">
+                        <img src="img/aulateorica.jpeg" alt="Surfista 3">
+                        <h3>Surf Kids</h3>
+                        <p>Aulas seguras e divertidas para crianças iniciantes.</p>
+                    </div>
+                    <div class="carrossel-card">
+                        <img src="img/concentracao.jpg" alt="Surfista 4">
+                        <h3>Campeonatos</h3>
+                        <p>Participe de eventos e campeonatos organizados por nossa escola.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carrossel-btn right">&#10095;</button>
+        </div>
+    </section>
+    
       
       
 
@@ -205,6 +265,31 @@
               menu.classList.toggle('show');
             });
           </script>
+          
+        
+          <script>
+            const cardsContainer = document.querySelector('.carrossel-cards');
+            const btnLeft = document.querySelector('.carrossel-btn.left');
+            const btnRight = document.querySelector('.carrossel-btn.right');
+        
+            let scrollAmount = 0;
+            const scrollStep = 320; // Aproximadamente a largura do card + gap
+        
+            btnLeft.addEventListener('click', () => {
+                scrollAmount -= scrollStep;
+                if (scrollAmount < 0) scrollAmount = 0;
+                cardsContainer.style.transform = `translateX(-${scrollAmount}px)`;
+            });
+        
+            btnRight.addEventListener('click', () => {
+                const maxScroll = cardsContainer.scrollWidth - cardsContainer.clientWidth;
+                scrollAmount += scrollStep;
+                if (scrollAmount > maxScroll) scrollAmount = maxScroll;
+                cardsContainer.style.transform = `translateX(-${scrollAmount}px)`;
+            });
+        </script>
+        
 
-</body>
+
+        </body>
 </html>
